@@ -1,0 +1,111 @@
+
+.body1{
+    background-image: url(hacker2.gif);
+    background-size: cover;
+    color: white;
+}
+.body2{
+    background-image: url(lock.gif);
+    background-position: top;
+    /* color: white; */
+}
+
+.body3{
+    background-image: url(access.gif);
+    background-size: cover;
+    background-position: top;
+}
+
+
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+.nav{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 20px;    
+    
+}
+
+.nav li{
+    list-style: none;
+   
+}
+
+.nav li a{
+    text-decoration: none;
+    color: white;
+    transition: all .3s;
+    padding: 3px 5px;
+    border-radius: 5px;
+    
+}
+.nav li a:hover  , .nav li a:active{
+    color: rgb(15, 211, 15) !important;
+    box-shadow: 0 0 10px rgba(255,255,255,0.8);
+   
+    border:none;
+}
+
+
+
+.back{
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.8);
+    border: 1px solid black;
+}
+
+.input{
+    backdrop-filter: blur(5px);
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* color: white; */
+}
+.input:hover ,.input:active{
+    box-shadow: 0 0 5px rgba(255,255,255,0.8);
+}
+
+.button{
+    background-color: black;
+    color: white;
+    transition: all .3s;
+    border: none;
+    border-radius: 5px;
+}
+
+.button:hover , .button:active{
+    color: rgb(15, 211, 15) !important;
+    box-shadow: 0 0 10px  rgba(255,255,255,0.8); ;
+}
+
+.button2{
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 5px rgba(255,255,255,0.8);
+    padding: 5px ;
+    transition: all .3s;
+    border-radius: 5px;
+}
+
+.button2:hover , .button2:active{
+    color: rgb(15, 211, 15) !important;
+    box-shadow: 0 0 10px rgb(15, 211, 15) ;
+}
+.go{
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
+  
+}
+
