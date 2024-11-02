@@ -13,6 +13,18 @@ function signup() {
 
   let users = JSON.parse(localStorage.getItem("users"));
 
+  // check user email has already exits or not
+if(users){
+for(let i=0 ; i < users.length ; i++){
+      if(users[i].email == email){
+    alert("Email Already Exits")
+    return
+    }
+}
+}
+
+// first check if user has exits so its add new email
+// if its not exits it will add the email.
   if (users) {
     users.push(userData);
     localStorage.setItem("users", JSON.stringify(users));
@@ -23,17 +35,25 @@ function signup() {
   }
 }
 
+
+// login function ;
+
 function login() {
   let inputEmail = document.getElementById("inputEmail").value;
   let inputPassword = document.getElementById("inputPassword").value;
   let allUsers = JSON.parse(localStorage.getItem("users"));
 
+  // it will check email had matched or not
   let emailMatch = true;
+
+  // in the allusers we have all users emails
+  // if alluser exits so it will check all the email and compare it to the login email.
+  
   if (allUsers) {
     for (let i = 0; i < allUsers.length; i++) {
-      if (allUsers[0].email == inputEmail) {
+      if (allUsers[i].email == inputEmail) {
         emailMatch = false;
-        if (inputPassword == allUsers[0].password) {
+        if (inputPassword == allUsers[i].password) {
           window.location.href = "./about.html";
         } else {
           alert("Invalid Password");
@@ -41,6 +61,7 @@ function login() {
         break;
       }
     }
+
     if (emailMatch) {
       alert("Email did not match!");
     }
