@@ -33,7 +33,21 @@ for(let i=0 ; i < users.length ; i++){
     localStorage.setItem("users", JSON.stringify([userData]));
     window.location.href = "./login.html";
   }
+
+
+  // empty the input fields
+  document.getElementById("name").value = ""
+  document.getElementById("email").value = ""
+  document.getElementById("password").value = ""
+
 }
+
+// usign addEventLister for stop to reload the page when user  submit the resquest.
+
+document.getElementById("signUpform").addEventListener("submit", function(event){
+  event.preventDefault();
+  signup();
+});
 
 
 // login function ;
@@ -69,6 +83,7 @@ function login() {
     alert("Please Register first");
   }
 
+
   // for single email only  ////
 
   //    let userData =  JSON.parse(localStorage.getItem("users"));
@@ -88,3 +103,10 @@ function login() {
   //         alert("Please Register User First")
   //     }
 }
+
+
+
+// document.getElementById("loginForm").addEventListener("submit", function(event){
+//   event.preventDefault();
+//   login();
+// });
